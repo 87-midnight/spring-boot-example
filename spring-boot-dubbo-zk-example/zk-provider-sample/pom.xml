@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consumer-sample</artifactId>
+    <artifactId>zk-provider-sample</artifactId>
 
     <dependencies>
-
         <!-- Spring Boot dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,6 +43,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
+
 </project>

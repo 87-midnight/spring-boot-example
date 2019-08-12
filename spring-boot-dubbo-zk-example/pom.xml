@@ -12,8 +12,8 @@
     <artifactId>spring-boot-dubbo-zk-example</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>provider-sample</module>
-        <module>consumer-sample</module>
+        <module>zk-provider-sample</module>
+        <module>zk-consumer-sample</module>
     </modules>
 
     <dependencies>
