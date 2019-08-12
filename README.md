@@ -7,4 +7,4 @@ demo build on spring boot framework
 
 ### spring-boot-dubbo-nacos-example
 
-### spring-boot-dubbo-zookeeper-example
+### spring-boot-dubbo-zk-example
