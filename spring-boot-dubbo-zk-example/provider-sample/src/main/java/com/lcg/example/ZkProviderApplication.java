@@ -12,13 +12,15 @@ import org.springframework.core.env.Environment;
 public class ZkProviderApplication {
 
     public static void main(String...args){
-//        new SpringApplicationBuilder(ZkProviderApplication.class)
-//                .listeners((ApplicationListener<ApplicationEnvironmentPreparedEvent>) event -> {
-//                    Environment environment = event.getEnvironment();
-//                    int port = environment.getProperty("embedded.zookeeper.port", int.class);
-//                    new EmbeddedZooKeeper(port, false).start();
-//                })
-//                .run(args);
-        SpringApplication.run(ZkProviderApplication.class,args);
+        // 这里单独起一个内置的zookeeper 服务，这样子是不带有集群功能。
+        //如果想使用独立的zookeeper，则注释掉SpringApplicationBuilder的代码，还原最后一行代码即可
+        new SpringApplicationBuilder(ZkProviderApplication.class)
+                .listeners((ApplicationListener<ApplicationEnvironmentPreparedEvent>) event -> {
+                    Environment environment = event.getEnvironment();
+                    int port = environment.getProperty("embedded.zookeeper.port", int.class);
+                    new EmbeddedZooKeeper(port, false).start();
+                })
+                .run(args);
+//        SpringApplication.run(ZkProviderApplication.class,args);
     }
 }
