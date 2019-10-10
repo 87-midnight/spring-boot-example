@@ -19,6 +19,7 @@
         <module>spring-boot-dubbo-zk-example</module>
         <module>spring-boot-dubbo-nacos-example</module>
         <module>spring-boot-dubbo-common-example</module>
+        <module>spring-boot-rabbit-example</module>
     </modules>
 
     <properties>
